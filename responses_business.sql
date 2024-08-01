@@ -30,7 +30,7 @@ WITH prepare_sellers AS (
         order_mart AS a
     LEFT JOIN
         item_mart AS b
-        ON Na.order_id=b.order_id
+        ON a.order_id=b.order_id
     WHERE
         b.category_l2 = 'Cell Phones and Telephones' AND YEAR(a.order_create_date) = 2020
     )
